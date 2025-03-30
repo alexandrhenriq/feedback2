@@ -5,8 +5,6 @@ export function App() {
 
   function handleAlterarNotaAvaliacao(nota) {
     setNotaAvaliacao(nota)
-
-    console.log(nota)
   }
 
   return (
