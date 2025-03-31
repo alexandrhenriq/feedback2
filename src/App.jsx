@@ -15,9 +15,9 @@ export function App() {
       setSubmited(true)
       return
     }
+    
+    alert("Please, select a rating!")
   }
-
-  alert("Please, select a rating!")
 
   return (
    submited === false ? (
