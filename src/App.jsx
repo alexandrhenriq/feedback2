@@ -1,10 +1,22 @@
 import iconStar from "./images/icon-star.svg"
+import illustrationThankYou from "./images/illustration-thank-you.svg"
+import { useState } from "react"
 
 export function App() {
+  const [submited, setSubmited] = useState(false)
   const [notaAvaliacao, setNotaAvaliacao] = useState(0)
 
   function handleAlterarNotaAvaliacao(nota) {
     setNotaAvaliacao(nota)
+
+    console.log(nota)
+  }
+
+  function handleSubmited() {
+    if (notaAvaliacao !== 0) {
+      setSubmited(true)
+      return
+    }
   }
 
   return (
@@ -18,14 +30,19 @@ export function App() {
       <p className="text-light-grey text-sm leading-1 mb-6">bla</p>
 
       <div className="flex justify-between mb-6">
-        <input type="button" value={1} className="w-10.5 h-10.5 bg-dark-blue rounded-full text-sm leading-2 text-medium-grey" onClick={() => handleAlterarNotaAvaliacao(1)}/>
-        <input type="button" value={2} className="w-10.5 h-10.5 bg-dark-blue rounded-full text-sm leading-2 text-medium-grey" onClick={() => handleAlterarNotaAvaliacao(2)}/>
-        <input type="button" value={3} className="w-10.5 h-10.5 bg-dark-blue rounded-full text-sm leading-2 text-medium-grey" onClick={() => handleAlterarNotaAvaliacao(3)}/>
-        <input type="button" value={4} className="w-10.5 h-10.5 bg-dark-blue rounded-full text-sm leading-2 text-medium-grey" onClick={() => handleAlterarNotaAvaliacao(4)}/>
-        <input type="button" value={5} className="w-10.5 h-10.5 bg-dark-blue rounded-full text-sm leading-2 text-medium-grey" onClick={() => handleAlterarNotaAvaliacao(5)}/>
+        <input type="button" value={1} className="w-10.5 h-10.5 bg-dark-blue rounded-full text-sm leading-2 text-medium-grey font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleAlterarNotaAvaliacao(1)}/>
+        <input type="button" value={2} className="w-10.5 h-10.5 bg-dark-blue rounded-full text-sm leading-2 text-medium-grey font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleAlterarNotaAvaliacao(2)}/>
+        <input type="button" value={3} className="w-10.5 h-10.5 bg-dark-blue rounded-full text-sm leading-2 text-medium-grey font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleAlterarNotaAvaliacao(3)}/>
+        <input type="button" value={4} className="w-10.5 h-10.5 bg-dark-blue rounded-full text-sm leading-2 text-medium-grey font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleAlterarNotaAvaliacao(4)}/>
+        <input type="button" value={5} className="w-10.5 h-10.5 bg-dark-blue rounded-full text-sm leading-2 text-medium-grey font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleAlterarNotaAvaliacao(5)}/>
       </div>
 
-      <button className="bg-orange w-full py-3 uppercase text-sm rounded-3xl tracking-1 font-bold">Submit</button>
+      <button className="bg-orange w-full py-3 uppercase text-sm rounded-3xl tracking-1 font-bold" onClick={handleSubmit}>Submit</button>
     </div>
+  ) : (
+    <div className="bg-gradient-dark max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass"></div>
+    <img src="{illustrationThankYou}" alt="illustration Thank You" />
+
+    <p></p>
   )
 }
