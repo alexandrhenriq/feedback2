@@ -21,7 +21,7 @@ export function App() {
 
   return (
    submited === false ? (
-    <div className="bg-gradient-dark mx-6 p-6 rounded-2xl text-white font-overpass max-w-103">
+    <div className="font-overpass bg-gradient-dark mx-6 p-6 rounded-2xl text-white font-overpass max-w-103">
     <div className="bg-dark-blue p-4 w-fit rounded-full mb-4">
       <img src={iconStar} alt="icon star" />
     </div>
@@ -41,7 +41,7 @@ export function App() {
     <button onClick={handleSubmited} className="bg-orange w-full py-3 uppercase text-sm rounded-3xl tracking-1 font-bold hover:bg-white hover:text-orange hover:cursor-pointer">Submit</button>
   </div>
    ) : (
-    <div className="bg-gradient-dark mx-6 p-6 rounded-2xl text-white font-overpass max-w-103">
+    <div className="font-overpass bg-gradient-dark mx-6 p-6 rounded-2xl text-white font-overpass max-w-103">
       <img className="mx-auto mb-6" src={illustrationThankYou} alt="illustration Thank You" />
 
       <p className="text-orange bg-dark-blue w-fit mx-auto px-3 py-1.25 rounded-3xl mb-6">You selected {notaAvaliacao} out of 5</p>
