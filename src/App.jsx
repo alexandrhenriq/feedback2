@@ -1,5 +1,6 @@
 import { CardInicial } from "./components/CardInicial"
 import { useState } from "react"
+import { CardFinal } from "./components/CardFinal"
 
 export function App() {
   const [submited, setSubmited] = useState(false)
